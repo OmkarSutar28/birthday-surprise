@@ -1,0 +1,22 @@
+<div class="lock-page">
+  <div class="lock-icon">🔒</div>
+  <p class="prompt">ENTER A PASSCODE</p>
+
+  <div class="dots" [class.shake]="shake">
+    <span *ngFor="let i of [0, 1, 2, 3, 4]" class="dot" [class.filled]="digits[i]"></span>
+  </div>
+
+  <p class="error-text" [class.visible]="error">Wrong passcode, try again.</p>
+
+  <div class="keypad">
+    <button
+      *ngFor="let key of keypad"
+      class="key"
+      [class.empty]="key === ''"
+      [disabled]="key === '' || checking"
+      (click)="press(key)"
+    >
+      {{ key }}
+    </button>
+  </div>
+</div>

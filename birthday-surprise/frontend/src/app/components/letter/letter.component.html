@@ -1,0 +1,19 @@
+<div class="letter-page" *ngIf="config">
+  <button class="like-btn" (click)="toggleLike()" [class.liked]="liked">
+    {{ liked ? '❤️' : '🤍' }}
+  </button>
+
+  <div class="content">
+    <div class="note">
+      <h1 class="handwritten title">{{ config.letterTitle }}</h1>
+      <p class="handwritten body-text" *ngFor="let para of paragraphs">{{ para }}</p>
+      <p class="handwritten signature">{{ config.signatureName }}</p>
+    </div>
+
+    <div class="gallery" *ngIf="photos.length">
+      <img *ngFor="let photo of photos" [src]="photo" alt="memory" class="gallery-photo" />
+    </div>
+  </div>
+
+  <button class="next-btn" (click)="goToCake()">tap here for one more surprise 🎂</button>
+</div>

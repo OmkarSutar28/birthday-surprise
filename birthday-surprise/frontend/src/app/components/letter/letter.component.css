@@ -1,0 +1,92 @@
+.letter-page {
+  min-height: 100vh;
+  background: var(--maroon);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 32px;
+  gap: 24px;
+}
+
+.like-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.like-btn.liked {
+  transform: scale(1.2);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  max-width: 900px;
+}
+
+.note {
+  background: #fdfaf3;
+  color: #3a2a1a;
+  padding: 28px 26px;
+  width: min(90vw, 380px);
+  box-shadow: 0 16px 34px var(--shadow);
+  clip-path: polygon(
+    0% 2%, 3% 0%, 8% 2%, 14% 0%, 20% 2%, 26% 0%, 32% 2%, 38% 0%, 44% 2%, 50% 0%,
+    56% 2%, 62% 0%, 68% 2%, 74% 0%, 80% 2%, 86% 0%, 92% 2%, 97% 0%, 100% 2%,
+    100% 98%, 97% 100%, 92% 98%, 86% 100%, 80% 98%, 74% 100%, 68% 98%, 62% 100%,
+    56% 98%, 50% 100%, 44% 98%, 38% 100%, 32% 98%, 26% 100%, 20% 98%, 14% 100%,
+    8% 98%, 3% 100%, 0% 98%
+  );
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 14px;
+}
+
+.body-text {
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.signature {
+  font-size: 22px;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(90vw, 200px);
+}
+
+.gallery-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 6px solid #fdfaf3;
+  box-shadow: 0 10px 22px var(--shadow);
+}
+
+.next-btn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.next-btn:hover {
+  color: var(--cream);
+}

@@ -1,0 +1,36 @@
+:root {
+  --maroon-deep: #6e1423;
+  --maroon: #8a1c2b;
+  --maroon-bright: #a91e34;
+  --cream: #f6ecd9;
+  --gold: #e8b86d;
+  --pink-heart: #ffb3c1;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--maroon-deep);
+  font-family: 'Poppins', sans-serif;
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+}
+
+.script {
+  font-family: 'Homemade Apple', cursive;
+}

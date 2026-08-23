@@ -1,0 +1,31 @@
+<div class="cake-page" *ngIf="config">
+  <div class="confetti-layer" *ngIf="celebrated">
+    <span
+      *ngFor="let piece of confetti"
+      class="confetti-piece"
+      [style.left.%]="piece.left"
+      [style.animation-delay.s]="piece.delay"
+      [style.animation-duration.s]="piece.duration"
+      [style.background]="piece.color"
+      [style.transform]="'rotate(' + piece.rotate + 'deg)'"
+    ></span>
+  </div>
+
+  <div class="scene">
+    <div class="cake" (click)="blowCandles()">
+      <div class="candles">
+        <span class="candle" *ngFor="let c of [1, 2, 3]">
+          <span class="flame" *ngIf="candlesLit"></span>
+        </span>
+      </div>
+      <div class="tier tier-top"></div>
+      <div class="tier tier-bottom"></div>
+    </div>
+
+    <p class="hint" *ngIf="candlesLit">tap the cake to blow out the candles 🕯️</p>
+
+    <div class="banner script" [class.show]="celebrated">Happy Birthday to You, {{ config.recipientName }}!</div>
+
+    <button class="relight-btn" *ngIf="celebrated" (click)="relight()">relight 🔁</button>
+  </div>
+</div>

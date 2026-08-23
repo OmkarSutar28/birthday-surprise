@@ -1,0 +1,70 @@
+.card-page {
+  min-height: 100vh;
+  background: var(--maroon);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 24px;
+}
+
+.polaroid {
+  position: relative;
+  background: #fdfaf3;
+  padding: 14px 14px 40px;
+  border-radius: 3px;
+  box-shadow: 0 20px 40px var(--shadow);
+  transform: rotate(-3deg);
+  width: min(78vw, 300px);
+  animation: settle 0.6s ease;
+}
+
+.ribbon {
+  position: absolute;
+  top: -18px;
+  left: -14px;
+  font-size: 30px;
+  transform: rotate(-20deg);
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: #ddd;
+  display: block;
+}
+
+.caption {
+  color: #333;
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0 0;
+  line-height: 1.2;
+}
+
+.surprise-btn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+
+.surprise-btn:hover {
+  color: var(--cream);
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: rotate(-3deg) translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-3deg) translateY(0) scale(1);
+  }
+}

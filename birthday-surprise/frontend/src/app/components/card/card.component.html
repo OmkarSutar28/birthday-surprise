@@ -1,0 +1,9 @@
+<div class="card-page" *ngIf="config">
+  <div class="polaroid">
+    <div class="ribbon">🎀</div>
+    <img [src]="photoUrl" [alt]="config.mainCaption" (error)="photoUrl = ''" />
+    <p class="caption script">{{ config.mainCaption }}<br />{{ config.recipientName }}</p>
+  </div>
+
+  <button class="surprise-btn" (click)="goToLetter()">tap here for a surprise 💌</button>
+</div>
