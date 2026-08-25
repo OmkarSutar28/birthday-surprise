@@ -1,5 +1,7 @@
+const BACKEND_URL = 'https://birthday-surprise-fxwy.onrender.com';
+
 export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:5080/api',
-  photosBaseUrl: 'http://localhost:5080',
+  production: true,
+  apiUrl: `${BACKEND_URL}/api`,
+  photosBaseUrl: BACKEND_URL,
 };
