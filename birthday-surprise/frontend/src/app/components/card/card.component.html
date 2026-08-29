@@ -1,7 +1,7 @@
 <div class="card-page" *ngIf="config">
   <div class="polaroid">
     <div class="ribbon">🎀</div>
-    <img [src]="assets/main.jpg" [alt]="config.mainCaption" (error)="photoUrl = ''" />
+    <img src="assets/main.jpg" [alt]="config.mainCaption" />
     <p class="caption script">{{ config.mainCaption }}<br />{{ config.recipientName }}</p>
   </div>
 
