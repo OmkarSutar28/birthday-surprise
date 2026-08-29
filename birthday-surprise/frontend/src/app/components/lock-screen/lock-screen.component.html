@@ -3,7 +3,7 @@
   <p class="prompt">ENTER A PASSCODE</p>
 
   <div class="dots" [class.shake]="shake">
-    <span *ngFor="let i of [0, 1, 2, 3, 4]" class="dot" [class.filled]="digits[i]"></span>
+    <span *ngFor="let i of [0, 1, 2, 3, 4,5,6,7]" class="dot" [class.filled]="digits[i]"></span>
   </div>
 
   <p class="error-text" [class.visible]="error">Wrong passcode, try again.</p>
