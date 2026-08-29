@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { BirthdayService } from '../../services/birthday.service';
 
-const CODE_LENGTH = 5;
+const CODE_LENGTH =8;
 
 @Component({
   selector: 'app-lock-screen',
