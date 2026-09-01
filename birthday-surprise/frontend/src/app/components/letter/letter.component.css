@@ -1,7 +1,7 @@
 .letter-page {
    min-height: 100vh;
    background: linear-gradient(rgba(110, 20, 35, 0.55), rgba(110, 20, 35, 0.75)),
-    url('/assets/image-cache.jpg') center center / cover no-repeat;
+    url('/assets/image-cache2.jpg') center center / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
